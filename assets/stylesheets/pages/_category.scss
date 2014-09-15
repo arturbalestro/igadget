@@ -1,0 +1,177 @@
+.mw_arrow {
+  @include sprites-menu_go;
+  float: right;
+  margin: 8px;
+}
+
+&[data-ur-state="disabled"] {
+  > .mw_indicator {
+    @extend .sprites-plus;
+    position:absolute;
+    top: 8px;
+    right: 8px;
+    margin: 0;
+  }
+}
+&[data-ur-state="enabled"] {
+  > .mw_indicator {
+    @extend .sprites-minus;
+    position:absolute;
+    top: 8px;
+    right: 8px;
+    margin: 0;
+  }
+}
+
+.Wrapper{
+	padding:0 10px;
+}
+.Left h2{
+	font-weight:normal;
+}
+.Left, .Content, .Right{
+	float:left;
+	width:100%;
+}
+
+#SideCategoryList{
+	border: 1px solid #802B00;
+    @include radius(5px);
+    clear: both;
+    float: left;
+    margin-bottom: 10px;
+    margin-top:10px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.ShopByPrice, .BrandList{
+	border: 1px solid #802B00;
+    @include radius(5px);
+    clear: both;
+    float: left;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+    width: 300px;
+}
+#CategoryHeading{
+	background: #802B00;
+	border: 1px solid #802B00;
+    @include radius(5px);
+    color: $white;
+    clear: both;
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+    line-height: 30px;
+    text-indent: 10px;
+    width: 300px;	
+}
+
+.menuCategoria{
+	@extend .pointer;
+	background: #802B00;
+    color: $white;
+    font-family: $ubuntu;
+    font-size: 16px;
+    font-weight: normal;
+    margin:0;
+    line-height: 30px;
+    text-indent: 10px;
+    position:relative;
+}
+
+.BlockContent{
+	
+	ul{
+		margin:0;
+		padding:0;
+		position:relative;
+	}
+
+	.categoriaItem{
+		background: #F4F1E0;
+		line-height: 30px;
+		list-style:none;
+		min-width: 143px;
+	}
+
+	.categoriaLink{
+		@extend .pointer;
+		color: #9D7B5E;
+	    display:block;
+	    font-family: $ubuntu;
+	    font-size: 16px;
+	    height: inherit;
+	    line-height: 30px;
+	    text-indent: 10px;
+	    text-decoration: none;
+	}
+
+	.ProductImage a{
+		display: table-cell;
+		text-indent: inherit;
+		vertical-align:middle;
+	}
+}
+
+#CategoryContent{
+	float:left;
+	margin-top:20px;
+	width:100%;
+
+	ul{
+		margin:0;
+		padding:0;
+		position:relative;
+	}
+
+	li{
+		float: left;
+	    list-style: none outside none;
+	    margin-bottom: 20px;
+	    margin-left: 3px;
+	    margin-right: 3px;
+	    min-width:143px;
+	}
+
+	.ProductDetails{ 
+		a{
+			color: #454545 !important;
+		    font-weight: normal;
+		    line-height: 20px !important;
+		    text-align: left;
+		    text-decoration:none;
+		    text-indent: 0 !important;
+		}
+	}
+
+	.ProductPriceRating{
+		margin-bottom:5px;
+		margin-top: 5px;
+	}
+	.ProductPriceRating em {
+	    font-family: 'Ubuntu';
+	    font-size: 15px;
+	    font-style: normal;
+	}
+
+	.ProductActionAdd{
+		text-align:center;
+
+	 	a{
+			background: none repeat scroll 0 0 #701C00;
+		    @include radius(8px);
+		    color: #FFFFFF;
+		    display:block;
+		    @extend .pointer;
+		    height: inherit;
+		    line-height: 40px;
+		    min-height: 40px;
+		    text-decoration:none;
+		    text-indent: 0;
+		}
+	}	
+}

@@ -1,0 +1,124 @@
+// Every page should have a class on the body
+// Scope that in each file at the start
+.ajustewrap{
+	background: $white;
+	margin-top:10px;
+}
+
+.mw_arrow {
+  @include sprites-menu_go;
+  float: right;
+  margin: 8px;
+}
+
+&[data-ur-state="disabled"] {
+  > .mw_indicator {
+    @extend .sprites-plus;
+    float:right;
+    margin:8px;
+  }
+}
+&[data-ur-state="enabled"] {
+  > .mw_indicator {
+    @extend .sprites-minus;
+    float:right;
+    margin:8px;
+  }
+}
+
+#HomeFeaturedProducts{
+	@extend .produtoBloco;
+}
+#HomeNewProducts{
+	@extend .produtoBloco;	
+}
+.produtoTitulo{
+	font-family: $ubuntu;
+    font-weight: normal;
+    text-align: center;
+}
+.produtoItem{
+	background: none !important;
+	margin-bottom:10px;
+	list-style: none;
+	text-align:center;
+}
+
+.ProductImage{
+	display:inline-block;
+	margin-bottom:10px;
+	vertical-align:top;
+}
+
+[data-ur-set="carousel"] {
+  height:260px;
+  display:inline-block;
+  vertical-align:top;
+  overflow: hidden;
+  position: relative;
+}
+[data-ur-carousel-component="scroll_container"] {
+	overflow: hidden;
+}
+[data-ur-carousel-component="item"] {
+  float: left;
+  list-style:none;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:20px;
+  min-width:143px;
+}
+[data-ur-carousel-button-type="prev"], [data-ur-carousel-button-type="next"] {
+  display:inline-block;
+  vertical-align:top;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+[data-ur-carousel-component="dots"] {
+	text-align: center;
+	margin-bottom: 10px;
+	display: inline-block;
+	margin-top: 2px;
+	vertical-align: top;
+}
+
+.BlockContent{
+	.ProductDetails{ 
+		a{
+			color: #454545 !important;
+		    font-weight: normal;
+		    line-height: 20px !important;
+		    text-align: left;
+		    text-decoration:none;
+		    text-indent: 0 !important;
+		}
+	}
+
+	.ProductPriceRating{
+		margin-bottom:5px;
+		margin-top: 5px;
+		text-align:left;
+	}
+	.ProductPriceRating em{
+		font-family: $ubuntu;
+	    font-size: 15px;
+	    font-style: normal;
+	}
+
+	.ProductActionAdd a{
+		background: none repeat scroll 0 0 #701C00;
+	    @include radius(8px);
+	    color: #FFFFFF;
+	    display:block;
+	    @extend .pointer;
+	    height: inherit;
+	    line-height: 40px;
+	    min-height: 40px;
+	    text-decoration:none;
+	    text-indent: 0;
+	}
+}
+
+.QuickViewBtn, #ModalOverlay, #ModalContainer{
+	display:none !important;
+}

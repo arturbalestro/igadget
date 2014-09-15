@@ -1,0 +1,120 @@
+#Header{
+	border-top:1px solid #000;
+
+	#Logo{
+		@include background(linear-gradient(#C14102 0, shade(#C14102,20%) 100%));
+		float:left;
+		width:100%;
+
+		h1{
+			margin:0;
+			padding:10px 8px;
+
+			a{
+				font-family: $ubuntu;
+				font-size:20px;
+				font-weight:normal;
+				text-shadow:0 -1px rgba(0,0,0,0.9);
+				color:white;
+				text-decoration:none;
+			}
+		}
+	}
+
+	#LogoContainer{
+		float:left;
+	    min-height: 51px;
+	}
+
+	#TopMenu{
+		float:right;
+		
+		ul{
+			margin:0;
+			padding:0;
+		}
+
+		li{
+			@include userButton;
+		}
+	}
+
+	#Menu{
+		float:left;
+		margin:10px 0;
+		width:300px;
+
+		ul{
+		    margin: 0;
+		    padding: 0;
+		    position: relative;
+		}
+		li{
+		    background: #F4F1E0;
+		    line-height: 30px;
+		    list-style: none outside none;
+		    min-width: 143px;
+		}
+		a{
+			color: #9D7B5E;
+		    display: block;
+		    font-family: 'Ubuntu';
+		    font-size: 16px;
+		    height: inherit;
+		    line-height: 30px;
+		    text-decoration: none;
+		    text-indent: 10px;
+		}
+	}
+
+	.menuLista{
+		border: 1px solid #802B00;
+	    @include radius(5px);
+	    overflow: hidden;
+	}
+
+	.mw_header_bottom{
+		width: 100%;
+		display:block;
+		@include background(linear-gradient(top, #852201, #6a1b00));
+
+		.mw_search{
+			display: inline-block;
+			width:75%;
+			position: relative;
+
+			div#SearchForm form{
+				float: left;
+    			position: relative;
+			}
+
+			input[type='text']{
+				border: 1px solid #000;
+				background: #f1f0f0;
+				font-size: 13px;
+				padding:4px;
+				height: 23px;
+				margin:0;
+				width:85%;
+				display:block;
+			}
+
+			.mw_search_btn{
+				height: 33px;
+				position: absolute;
+				top: 0;
+				right: 0px;
+			}
+		}
+
+		.mw_menu_btn{
+			cursor:pointer;
+			float:right;
+			display: block;
+
+			&[data-ur-state='enabled'] span{
+				@extend .sprites-menu-on;
+			}
+		}
+	}
+}

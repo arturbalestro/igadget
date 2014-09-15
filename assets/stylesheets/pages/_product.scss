@@ -1,0 +1,58 @@
+.Content{
+	font-family:$ubuntu;
+}
+
+.ProductThumb{
+	margin-bottom:10px;
+	text-align:center;
+}
+.ProductThumbImage{
+	display:inline-block;
+	position:relative;
+	vertical-align:top;
+}
+.ImageCarouselBox{
+	@extend .ProductThumbImage;
+	padding-left:0 !important;
+}
+#ImageScrollPrev{
+	float:left;
+	margin-right:3px;
+	margin-top:9px;
+}
+.ProductTinyImageList{
+	float:left;
+}
+#ImageScrollNext{
+	float:right;
+	margin-left:3px;
+	margin-top:9px;
+}
+
+.produtoDados{
+	background:#F2F4F7;
+	border:1px solid #D5D6D7;
+	padding:10px;
+}
+#ProductDescription, #ProductReviews{
+	padding:0 10px;	
+}
+
+div.DetailRow{
+	line-height:23px;
+	margin-bottom:4px;
+}
+div.Label{
+	float:left;
+	margin-right: 3px;
+}
+div.Value a{
+	color:#57739B;
+	text-decoration:none;
+}
+div.BulkDiscount{
+	margin-top:10px;
+}
+.BlockContent .ProductReviewList li{
+	background: none;
+}

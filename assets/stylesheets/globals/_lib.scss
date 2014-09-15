@@ -1,0 +1,13 @@
+@mixin userButton(){
+	float: left;
+    list-style: none outside none;
+    margin: 5px 7px;
+}
+
+@mixin radius($rad){
+	border-radius: $rad;
+	-moz-border-radius: $rad;
+	-webkit-border-radius: $rad;
+	-ms-border-radius: $rad;
+	-o-border-radius: $rad;
+}
